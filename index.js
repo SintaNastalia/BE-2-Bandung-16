@@ -22,7 +22,7 @@ app.use(
 app.use("/", mainRouter);
 
 
-const port = process.env.PORT || 30098
+const port = process.env.PORT || 7162
 app.listen(port, function(){
     console.log("server start on", port)
     connection.authenticate()
