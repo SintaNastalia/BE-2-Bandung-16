@@ -14,15 +14,18 @@ app.use(express.static("public"));
 
 app.use(
     cors({
-        origin: "*"
+        origin: "*", // Ganti dengan domain aplikasi Anda jika mungkin
+        methods: "POST", // Hanya izinkan metode POST
+        allowedHeaders: ["Content-Type"],
+        optionsSuccessStatus: 204,
     })
-)
+);
 
 // http router
 app.use("/", mainRouter);
 
 
-const port = process.env.PORT || 7162
+const port = process.env.PORT || 30098 || 7162
 app.listen(port, function(){
     console.log("server start on", port)
     connection.authenticate()
