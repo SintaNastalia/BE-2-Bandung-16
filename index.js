@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express") // ini perlu
 const path = require('path'); //tidak perlu npm install
 const connection = require('./app/model/index')

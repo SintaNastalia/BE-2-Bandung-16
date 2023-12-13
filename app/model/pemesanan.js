@@ -14,7 +14,8 @@ const pemesanan = connection.define("pemesanan",
     type_room: {type: sequelize.DataTypes.TEXT},
 }, {
     freezeTableName: true,
-    timestamps: false
+    timestamps: false,
+    tableName: 'pemesanan2'
 })
 
 module.exports = pemesanan
